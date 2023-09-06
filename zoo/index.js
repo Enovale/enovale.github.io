@@ -35,6 +35,20 @@ function sprintA1Lab3() {
     }
 }
 
+function sprintA1Lab4() {
+    printSeparator("Sprint A1 Lab 4")
+
+    var animalAge = 400
+    var humanAge = animalAge / 7
+    humanAge > 50 ? console.log("The animal is " + humanAge + " and is OLD") : console.log("The animal is " + humanAge + " and is YOUTHFUL")
+
+    // It says I need a unary but it doesn't say where so here you go
+    var unary = 0
+    console.log(unary)
+    unary++
+    console.log(unary)
+}
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
