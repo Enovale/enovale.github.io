@@ -30,15 +30,16 @@ function sprintA1Lab2() {
 function sprintA1Lab3() {
     printSeparator("Sprint A1 Lab 3")
     
+    // Get the user input
     let input = document.getElementById("sprintA1Lab3Text").value
     let num = Number(input)
     
+    // Check if the number is over
     if (num > 300) {
         console.log("The number is over 300")
-    }
-    else if (num < 300) {
+    } else if (num < 300) { // Check if its under
         console.log("The number is less than 300")
-    } else {
+    } else { // Check if it's equal
         console.log("The number is equal to 300")
     }
 }
