@@ -14,6 +14,14 @@ function createZoo() {
 
     // Log to console
     console.log(zoo)
+
+    updateDisplay()
+}
+
+function updateDisplay() {
+    document.getElementById("zooName").innerText = zoo.name
+    document.getElementById("zooCapacity").innerText = zoo.capacity
+    document.getElementById("zooGuests").innerText = zoo.numGuests
 }
 
 function populateZoo() {
