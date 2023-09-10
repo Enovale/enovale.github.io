@@ -33,10 +33,13 @@ function sprintA1Lab3() {
     let input = document.getElementById("sprintA1Lab3Text").value
     let num = Number(input)
     
-    if (num == 300) {
-        console.log("The number is equal to 300")
+    if (num > 300) {
+        console.log("The number is over 300")
+    }
+    else if (num < 300) {
+        console.log("The number is less than 300")
     } else {
-        console.log("The number is not equal to 300")
+        console.log("The number is equal to 300")
     }
 }
 
