@@ -81,6 +81,30 @@ function sprintA1Lab5() {
     }
 }
 
+function sprintA2Lab1() {
+    printSeparator("Sprint A2 Lab 1")
+
+    // Define array
+    let arr = [];
+
+    // Add starter animals
+    arr.push("Slug")
+    arr.push("Cat")
+    arr.push("Dog")
+
+    // Remove the last element
+    arr.pop()
+
+    // Add two elements to the start of the array
+    arr.unshift("Aligator", "Peacock")
+
+    // Remove the first element of the array
+    arr.shift()
+
+    // Display the array in the console
+    console.log(arr)
+}
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
