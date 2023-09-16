@@ -47,17 +47,7 @@ function sprintA1Lab3() {
 function sprintA1Lab4() {
     printSeparator("Sprint A1 Lab 4")
 
-    /*
-    // Set the age
-    let animalAge = 400
-    let humanAge = animalAge / 7 // This is 57.7 or so
-    console.log("Animal age: " + animalAge + ", Human age: " + humanAge)
-
-    // Check the age and print to console
-    humanAge > 50 ? console.log("The animal is OLD") : console.log("The animal is YOUTHFUL")
-    */
-
-    // The rubric says to calculate the human age but apparently thats wrong so i'll do it in reverse this time
+    // Define and calculate ages.
     let humanAge = 20
     let animalAge = humanAge * 7
     // Print age
@@ -66,7 +56,7 @@ function sprintA1Lab4() {
     // Print whether old or not
     animalAge > 50 ? console.log("The animal is old") : console.log("The animal is youthful")
 
-    // It says I need a unary but it doesn't say where so here you go
+    // Defines a variable and uses a unary operator.
     let unary = 0
     console.log(unary)
     unary++
@@ -76,10 +66,12 @@ function sprintA1Lab4() {
 function sprintA1Lab5() {
     printSeparator("Sprint A1 Lab 5")
 
+    // Intentional errors
     try {
         myasfdsfkdla;jfaskfasfsakfjas;lkfjaslfsdajfl;sa += 2 == 3;
     }
     catch(e) {
+        // Explain the error.
         if (e.name === 'ReferenceError') {
             console.error("A reference error has occured: " + e.message)
         }
