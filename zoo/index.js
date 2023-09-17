@@ -193,6 +193,7 @@ function A2Lab3String() {
 function A2Lab3EvenOdd() {
     printSeparator("A2 Lab 3 Even Odd")
 
+    // Test even or odd on 5 different numbers.
     for(let i = 0; i < 5; i++) {
         console.log(i + " is " + ((i % 2) ? "Odd" : "Even"))
     }
