@@ -22,6 +22,13 @@ function updateDisplay() {
     document.getElementById("zooName").innerText = zoo.name
     document.getElementById("zooCapacity").innerText = zoo.capacity
     document.getElementById("zooGuests").innerText = zoo.numGuests
+
+    // Add an HTML representation of all animals.
+    zoo.animals.forEach(function (v, i, arr) {
+        let newAnimal = document.createElement("p")
+        newAnimal.innerText = `Name: ${v.name}\nType: ${v.type}\nAge: ${v.age}\nGender: ${v.gender}\nWeight: ${v.weight}\nIs Pregnant: ${v.isPregnant}`
+        document.getElementById("zooAnimalContainer").appendChild(newAnimal)
+    })
 }
 
 function populateZoo() {
@@ -72,4 +79,6 @@ function populateZoo() {
 
     // Log animals
     console.log(zoo.animals)
+
+    updateDisplay()
 }
