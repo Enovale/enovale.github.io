@@ -108,6 +108,7 @@ function sprintA2Lab1() {
 function sprintA2Lab2() {
     printSeparator("Sprint A2 Lab 2")
 
+    // Define, and manipulate animals in the zoo.
     let zooAnimals =
         [
             {
@@ -131,6 +132,7 @@ function sprintA2Lab2() {
         habitat: "Average"
     })
 
+    // Edit the second animal's habitat.
     zooAnimals.splice(1, 1, {
         name: "Dave",
         species: "Dog",
@@ -138,6 +140,7 @@ function sprintA2Lab2() {
         habitat: "Room Temperature"
     })
 
+    // Find the oldest animal in the zoo.
     let maxVal = 0
     let maxIndex = 0
     for (let i = 0; i < zooAnimals.length; i++) {
@@ -147,12 +150,15 @@ function sprintA2Lab2() {
         }
     }
 
-    console.log(zooAnimals)
-    console.log(zooAnimals[maxIndex])
-
+    // Sort the animals by age in ascending order
     zooAnimals.sort(function (a, b) {
         return a.age - b.age
     })
+
+    console.log(zooAnimals)
+
+    // Display the oldest animal
+    console.log(zooAnimals[maxIndex])
 }
 
 function printSeparator(name) {
