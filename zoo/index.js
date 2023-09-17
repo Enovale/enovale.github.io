@@ -161,6 +161,43 @@ function sprintA2Lab2() {
     console.log(zooAnimals[maxIndex])
 }
 
+function A2Lab3Enclosure() {
+    printSeparator("A2 Lab 3 Enclosure")
+
+    // Calculate the enclosure area
+    let enclosureLength = 10
+    let enclosureWidth = 6
+    let enclosureArea = Math.imul(enclosureLength, enclosureWidth)
+
+    console.log("Enclosure Area: " + enclosureArea)
+}
+
+function A2Lab3Date() {
+    printSeparator("A2 Lab 3 Date")
+
+    // Get the current datetime and display it
+    let date = new Date(Date.now())
+    console.log(date)
+}
+
+function A2Lab3String() {
+    printSeparator("A2 Lab 3 String")
+
+    // Convert names to uppercase to fit on documents
+    let legalName = "James"
+    let processedName = legalName.toUpperCase()
+
+    console.log(processedName)
+}
+
+function A2Lab3EvenOdd() {
+    printSeparator("A2 Lab 3 Even Odd")
+
+    for(let i = 0; i < 5; i++) {
+        console.log(i + " is " + ((i % 2) ? "Odd" : "Even"))
+    }
+}
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
