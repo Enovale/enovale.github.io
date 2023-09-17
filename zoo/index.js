@@ -105,6 +105,56 @@ function sprintA2Lab1() {
     console.log(arr)
 }
 
+function sprintA2Lab2() {
+    printSeparator("Sprint A2 Lab 2")
+
+    let zooAnimals =
+        [
+            {
+                name: "Sally",
+                species: "Beaver",
+                age: 4,
+                habitat: "Warm"
+            },
+            {
+                name: "Dave",
+                species: "Dog",
+                age: 5,
+                habitat: "Average"
+            },
+        ]
+
+    zooAnimals.push({
+        name: "Margaret",
+        species: "Cat",
+        age: 3,
+        habitat: "Average"
+    })
+
+    zooAnimals.splice(1, 1, {
+        name: "Dave",
+        species: "Dog",
+        age: 5,
+        habitat: "Room Temperature"
+    })
+
+    let maxVal = 0
+    let maxIndex = 0
+    for (let i = 0; i < zooAnimals.length; i++) {
+        if (maxVal < zooAnimals[i].age) {
+            maxVal = zooAnimals[i].age
+            maxIndex = i
+        }
+    }
+
+    console.log(zooAnimals)
+    console.log(zooAnimals[maxIndex])
+
+    zooAnimals.sort(function (a, b) {
+        return a.age - b.age
+    })
+}
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
