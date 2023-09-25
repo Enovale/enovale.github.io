@@ -199,6 +199,22 @@ function A2Lab3EvenOdd() {
     }
 }
 
+function A3Lab1Animal() {
+    printSeparator("A3 Lab 1 Animal")
+
+    // Find the existing html elements
+    let animalDiv = document.getElementById("a3lab1Animal")
+    let animalName = document.getElementById("a3lab1AnimalName")
+
+    // Set our animal name
+    animalName.innerText = "Billie"
+
+    // Add our new information paragraph
+    let newInfo = document.createElement("p")
+    newInfo.innerText = "Weight: 10 lbs"
+    animalDiv.appendChild(newInfo)
+}
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
