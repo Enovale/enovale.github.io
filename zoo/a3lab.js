@@ -23,3 +23,14 @@ function removeAnimal(obj) {
     // Remove the animal object from the list of animals
     animalDiv.removeChild(obj)
 }
+
+function setRegionInfo(str) {
+    document.getElementById("regionInfo").innerText = str
+}
+
+let regionMap = Array.from(document.getElementById("zooMap").children)
+
+regionMap.forEach(function (v, i, arr) {
+    let region = document.getElementById(v.id)
+    region.addEventListener("click", function() {setRegionInfo(region.alt)})
+})

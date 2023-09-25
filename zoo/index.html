@@ -21,11 +21,20 @@
         </div>
         <button onclick="A3Lab1Animal()" >Sprint A3 Lab 1 Animal</button><br>
         <p>A3 Lab 2</p>
-        <div id="animalList">
-
-        </div>
+        <div id="animalList"></div>
         <input id="newAnimalName" type="text" />
         <button onclick="addAnimal()">Add Animal</button><br>
+        <p>
+        A3 Lab 3
+        </p>
+        <p id="regionInfo">Click a region to learn more about it</p>
+        <img usemap="#zooMap" alt="map of the zoo" src="https://static.wixstatic.com/media/a539b0_388ced4376c84826819e6b54a5b1be90~mv2.png/v1/fill/w_580,h_715,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/a539b0_388ced4376c84826819e6b54a5b1be90~mv2.png" />
+        <map id="zooMap" name="zooMap">
+            <area id="hotRegion" shape="rect" coords="0,470,180,670" href="#" alt="Hot Region">
+            <area id="coldRegion" shape="rect" coords="270,0,700,180" href="#" alt="Cold Region">
+            <area id="aridRegion" shape="rect" coords="250,450,420,550" href="#" alt="Arid Region">
+        </map>
+        <br>
         <script src="index.js"></script>
         <script src="a3lab.js"></script>
     </body>
