@@ -36,11 +36,13 @@ function updateDisplay() {
         newAnimal.innerText = `Name: ${v.name}\nType: ${v.type}\nAge: ${v.age}\nGender: ${v.gender}\nWeight: ${v.weight}\nIs Pregnant: ${v.isPregnant}`
         zooAnimalContainer.appendChild(newAnimal)
 
+        // Update the animal table
         let animalRow = createTableRow([v.name, v.type, v.age, v.gender, v.weight, v.isPregnant])
         zooAnimalTable.appendChild(animalRow)
     })
 }
 
+// Dynamically create a table row with the strings provided
 function createTableRow(dataArr) {
     let row = document.createElement("tr")
     dataArr.forEach(function (v, i, arr) {
