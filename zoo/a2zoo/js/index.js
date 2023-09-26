@@ -115,10 +115,23 @@ function populateZoo() {
 }
 
 let a4Form = document.getElementById('a4Form');
+let formThankYou = document.getElementById("formThankYou")
+let formError = document.getElementById("formError")
 
+// Prevent form but submitting and display the thank you message.
 a4Form.addEventListener('submit', event => {
     // prevent the browser from submitting
     event.preventDefault();
 
-    document.getElementById("formThankYou").style = ""
+    // Make sure the user put in a username
+    let username = a4Form.elements['userName'].value
+    if (!username) {
+        formThankYou.style = "display: none;"
+
+        formError.innerText = "Name cannot be blank."
+        return
+    }
+
+    formError.innerText = ""
+    formThankYou.style = ""
 });
