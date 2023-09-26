@@ -2,3 +2,16 @@ body {
     background-color: black;
     color: white;
 }
+
+table {
+    border: 1px solid;
+}
+
+table tr th {
+    font-family: "Times New Roman";
+    font-weight: bold;
+}
+
+table tr td {
+    font-family: "Arial";
+}

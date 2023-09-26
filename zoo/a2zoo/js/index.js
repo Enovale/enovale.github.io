@@ -1,5 +1,12 @@
 let zoo = null
 
+let zooAnimalContainer = document.getElementById("zooAnimalContainer")
+let zooNameElement = document.getElementById("zooName")
+let zooCapacityElement = document.getElementById("zooCapacity")
+let zooGuestsElement = document.getElementById("zooGuests")
+
+let zooAnimalTable = document.getElementById("zooAnimalTable")
+
 function createZoo() {
     // Log to console
     console.log("Creating zoo...")
@@ -19,16 +26,30 @@ function createZoo() {
 }
 
 function updateDisplay() {
-    document.getElementById("zooName").innerText = zoo.name
-    document.getElementById("zooCapacity").innerText = zoo.capacity
-    document.getElementById("zooGuests").innerText = zoo.numGuests
+    zooNameElement.innerText = zoo.name
+    zooCapacityElement.innerText = zoo.capacity
+    zooGuestsElement.innerText = zoo.numGuests
 
     // Add an HTML representation of all animals.
     zoo.animals.forEach(function (v, i, arr) {
         let newAnimal = document.createElement("p")
         newAnimal.innerText = `Name: ${v.name}\nType: ${v.type}\nAge: ${v.age}\nGender: ${v.gender}\nWeight: ${v.weight}\nIs Pregnant: ${v.isPregnant}`
-        document.getElementById("zooAnimalContainer").appendChild(newAnimal)
+        zooAnimalContainer.appendChild(newAnimal)
+
+        let animalRow = createTableRow([v.name, v.type, v.age, v.gender, v.weight, v.isPregnant])
+        zooAnimalTable.appendChild(animalRow)
     })
+}
+
+function createTableRow(dataArr) {
+    let row = document.createElement("tr")
+    dataArr.forEach(function (v, i, arr) {
+        let data = document.createElement("td")
+        data.innerText = v
+        row.appendChild(data)
+    })
+
+    return row
 }
 
 function populateZoo() {
