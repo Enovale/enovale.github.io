@@ -28,6 +28,21 @@
 
         <button onclick="createZoo()" >Create Zoo Object</button><br>
         <button onclick="populateZoo()" >Populate Zoo Animals</button><br>
+        <p>A4 Lab 1 Adoption Form</p>
+        <form id="a4Form" name="a4Form" method="post" action="#">
+            <label for="userName">Name</label>
+            <input id="userName" name="userName" placeholder="Name" type="text">
+
+            <label for="formAnimals">Animal</label>
+            <select id="formAnimals" name="formAnimals">
+
+            </select>
+            <br>
+            <input type="submit" alt="Submit" id="submit" name="submit">
+        </form>
+        <p id="formThankYou" style="display: none;">
+        Thank you for submitting!
+        </p>
         <script src="js/index.js"></script>
     </body>
 </html>

@@ -7,6 +7,8 @@ let zooGuestsElement = document.getElementById("zooGuests")
 
 let zooAnimalTable = document.getElementById("zooAnimalTable")
 
+let zooAnimalDropdown = document.getElementById("formAnimals")
+
 function createZoo() {
     // Log to console
     console.log("Creating zoo...")
@@ -39,6 +41,12 @@ function updateDisplay() {
         // Update the animal table
         let animalRow = createTableRow([v.name, v.type, v.age, v.gender, v.weight, v.isPregnant])
         zooAnimalTable.appendChild(animalRow)
+
+        // Update the animal choice form
+        let animalChoice = document.createElement("option")
+        animalChoice.value = i.toString()
+        animalChoice.innerText = v.name
+        zooAnimalDropdown.appendChild(animalChoice)
     })
 }
 
@@ -105,3 +113,12 @@ function populateZoo() {
 
     updateDisplay()
 }
+
+let a4Form = document.getElementById('a4Form');
+
+a4Form.addEventListener('submit', event => {
+    // prevent the browser from submitting
+    event.preventDefault();
+
+    document.getElementById("formThankYou").style = ""
+});
