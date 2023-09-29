@@ -215,6 +215,42 @@ function A3Lab1Animal() {
     animalDiv.appendChild(newInfo)
 }
 
+let a4Form = document.getElementById('a4Form');
+let formThankYou = document.getElementById("formThankYou")
+let formError = document.getElementById("formError")
+
+// Prevent form but submitting and display the thank you message.
+a4Form.addEventListener('submit', event => {
+    // Make sure the user put in a username
+    let username = a4Form.elements['userName'].value
+    if (!username) {
+        formThankYou.style = "display: none;"
+
+        formError.innerText = "Name cannot be blank."
+        console.error(formError.innerText)
+
+        // prevent the browser from submitting
+        event.preventDefault();
+        return
+    }
+
+    // Make sure the booked days is filled out and between 1-7 inclusive.
+    let bookDays = Number(a4Form.elements['days'].value)
+    if (!bookDays || (bookDays <= 0 || bookDays > 7)) {
+        formThankYou.style = "display: none;"
+
+        formError.innerText = "Booked days cannot be blank and must be between 1 and 7."
+        console.error(formError.innerText)
+
+        // prevent the browser from submitting
+        event.preventDefault();
+        return
+    }
+
+    formError.innerText = ""
+    formThankYou.style = ""
+});
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
