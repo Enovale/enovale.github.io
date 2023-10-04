@@ -251,6 +251,51 @@ a4Form.addEventListener('submit', event => {
     formThankYou.style = ""
 });
 
+let a4ReviewForm = document.getElementById('a4ReviewForm');
+let reviewThankYou = document.getElementById("reviewFormThankYou")
+let reviewError = document.getElementById("reviewFormError")
+
+// Prevent form but submitting and display the thank you message.
+a4ReviewForm.addEventListener('submit', event => {
+    // Make sure the user put in a username
+    let username = a4ReviewForm.elements['reviewUserName'].value
+    if (!username) {
+        reviewThankYou.style = "display: none;"
+
+        reviewError.innerText = "Name cannot be blank."
+        console.error(reviewError.innerText)
+
+        // prevent the browser from submitting
+        event.preventDefault();
+        return
+    }
+
+    let formReview = a4ReviewForm.elements['reviewContent'].value
+    if (!formReview) {
+        reviewThankYou.style = "display: none;"
+
+        reviewError.innerText = "Review must have content."
+        console.error(reviewError.innerText)
+
+        // prevent the browser from submitting
+        event.preventDefault();
+        return
+    }
+
+    let review = { name: username, content: formReview }
+
+    postReview(review)
+
+    reviewError.innerText = ""
+    reviewThankYou.style = ""
+});
+
+// Fake API call
+function postReview(review) {
+    // Pretend to log API output
+    console.log(JSON.stringify(review))
+}
+
 function printSeparator(name) {
     console.log()
     console.log("======== " + name + " ========")
