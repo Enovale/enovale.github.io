@@ -10,6 +10,7 @@
         <div>
             <p>Zoo Name: <span id="zooName">unknown</span></p>
             <p>Zoo Capacity: <span id="zooCapacity">unknown</span></p>
+            <p>Zoo Animals: <span id="zooAnimalCount">unknown</span></p>
             <p>Zoo NumberOfGuests: <span id="zooGuests">unknown</span></p>
         </div>
 
@@ -28,6 +29,32 @@
 
         <button onclick="createZoo()" >Create Zoo Object</button><br>
         <button onclick="populateZoo()" >Populate Zoo Animals</button><br>
+
+        <p>Add/Edit Animal</p>
+        <form id="animalForm" name="animalForm" method="post" action="#">
+            <input id="animalIndex" name="animalIndex" type="number" style="display: none;">
+            <label for="animalName">Animal Name</label>
+            <input id="animalName" name="animalName" placeholder="Name" type="text">
+
+            <label for="animalType">Type</label>
+            <input id="animalType" name="animalType" placeholder="Badger" type="text">
+
+            <label for="animalAge">Age</label>
+            <input id="animalAge" name="animalAge" placeholder="4" type="number">
+
+            <label for="animalGender">Gender</label>
+            <input id="animalGender" name="animalGender" placeholder="Male" type="text">
+
+            <label for="animalWeight">Weight</label>
+            <input id="animalWeight" name="animalWeight" placeholder="30" step=".01" type="number">
+
+            <label for="animalPregnant">Is This Animal Pregnant?</label>
+            <input id="animalPregnant" name="animalPregnant" value="false" type="checkbox">
+            <br>
+            <input type="submit" alt="Submit" id="animalSubmit" name="animalSubmit">
+        </form>
+        <p id="animalError"></p>
+
         <p>A4 Lab 1 Adoption Form</p>
         <form id="a4Form" name="a4Form" method="post" action="#">
             <label for="userName">Name</label>
