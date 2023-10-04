@@ -270,6 +270,7 @@ a4ReviewForm.addEventListener('submit', event => {
         return
     }
 
+    // Make sure user submitted review content.
     let formReview = a4ReviewForm.elements['reviewContent'].value
     if (!formReview) {
         reviewThankYou.style = "display: none;"
@@ -282,8 +283,8 @@ a4ReviewForm.addEventListener('submit', event => {
         return
     }
 
+    // Create review object and fake a API post.
     let review = { name: username, content: formReview }
-
     postReview(review)
 
     reviewError.innerText = ""
