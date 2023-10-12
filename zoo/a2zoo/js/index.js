@@ -35,6 +35,11 @@ function updateDisplay() {
     zooGuestsElement.innerText = zoo.numGuests
 }
 
+function admitGuest() {
+    zoo.numGuests++
+    updateDisplay()
+}
+
 // Dynamically create a table row with the strings provided
 function createTableRow(dataArr) {
     let row = document.createElement("tr")

@@ -8,10 +8,11 @@
         <p>Zoo Project</p><br>
 
         <div>
-            <p>Zoo Name: <span id="zooName">unknown</span></p>
-            <p>Zoo Capacity: <span id="zooCapacity">unknown</span></p>
-            <p>Zoo Animals: <span id="zooAnimalCount">unknown</span></p>
-            <p>Zoo NumberOfGuests: <span id="zooGuests">unknown</span></p>
+            <label class="zooField" for="zooName">Zoo Name: </label><span id="zooName" class="zooField">unknown</span><br>
+            <label class="zooField" for="zooCapacity">Zoo Capacity: </label><span id="zooCapacity" class="zooField">unknown</span><br>
+            <label class="zooField" for="zooAnimalCount">Zoo Animals: </label><span id="zooAnimalCount" class="zooField">unknown</span><br>
+            <label class="zooField" for="zooGuests">Zoo NumberOfGuests: </label><span id="zooGuests" class="zooField">unknown</span><br>
+            <br>
         </div>
 
         <div id="zooAnimalContainer"></div>
@@ -29,6 +30,8 @@
 
         <button onclick="createZoo()" >Create Zoo Object</button><br>
         <button onclick="populateZoo()" >Populate Zoo Animals</button><br>
+        <br>
+        <button onclick="admitGuest()">Admit Guest</button><br>
 
         <p>Add/Edit Animal</p>
         <form id="animalForm" name="animalForm" method="post" action="#">

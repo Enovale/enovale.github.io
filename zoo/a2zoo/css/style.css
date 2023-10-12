@@ -15,3 +15,23 @@ table tr th {
 table tr td {
     font-family: "Arial";
 }
+
+.zooField {
+    font-size: 14pt;
+}
+
+#zooName {
+    color: grey;
+}
+
+#zooCapacity {
+    color: lightgrey;
+}
+
+#zooAnimalCount {
+    color: slategrey;
+}
+
+#zooGuests {
+    color: lightslategrey;
+}
